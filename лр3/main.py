@@ -23,7 +23,8 @@ def main():
              top_place_img: int,
              color_btn_normal: str, color_btn_select: str):
 
-        img = ctk.CTkLabel(app, image=ctk.CTkImage(dark_image=Image.open(img_path), size=(150, 150)), text='')
+        img = ctk.CTkLabel(app, image=ctk.CTkImage(dark_image=Image.open(img_path),
+                                                   size=(150, 150)), text='')
 
         btn = ctk.CTkButton(app, text=name,
                             font=ctk.CTkFont(size=25),
@@ -45,11 +46,7 @@ def main():
          170,
          '#DDA0DD', '#DA70D6')
 
-    btn_exit = ctk.CTkButton(app, text='Exit',  # выйти из приложения
-                             font=ctk.CTkFont(size=25),
-                             width=200, height=50,
-                             fg_color='#1E90FF',
-                             command=lambda: functions.error_destroy(app))
+    btn_exit = functions.exit_btn(app, '#1E90FF')
     btn_exit.place(relx=0.5, y=420, anchor='center')
 
     app.mainloop()

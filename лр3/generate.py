@@ -48,18 +48,13 @@ def generate_screen(game_name: str,
         code_box.tag_config("center", justify="center") # создаем тег (текст посередине)
         code_box.insert('0.0', res_str, 'center') # теперь используем этот тег
 
-    btn_go_to_game = ctk.CTkButton(app, text='generate code', font=ctk.CTkFont(size=25),
+    btn_generate_code = ctk.CTkButton(app, text='generate code', font=ctk.CTkFont(size=25),
                         width=200, height=40,
                         fg_color=color_btn_normal,
                         command=generate_code)
-    def exit_app():
-        functions.error_destroy(app) # удаляем окно
-        functions.stop_music_exit() # стоп музыки
 
-    btn_exit = ctk.CTkButton(app, text='Exit', font=ctk.CTkFont(size=25),
-                             width=200, height=50,
-                             fg_color=color_btn_normal,
-                             command=exit_app)
+
+    btn_exit = functions.exit_btn(app, color_btn_normal)
     btn_back = ctk.CTkButton(app, text='back',
                             font=ctk.CTkFont(size=25),
                             width=20, height=10,
@@ -72,7 +67,7 @@ def generate_screen(game_name: str,
 
     btn_back.place(x=10, y=10)
     btn_exit.place(relx=0.5, y=420, anchor="center")
-    btn_go_to_game.place(relx=0.5, y=250, anchor="center")
+    btn_generate_code.place(relx=0.5, y=250, anchor="center")
     btn_play_stop_music.place(relx=0.5, y=480, anchor="center")
 
     functions.animated_gif(app, gif_path)
