@@ -38,11 +38,6 @@ def sound(app, sound_path, btn_color_normal, btn_color_select):
     return btn_play_stop
 
 
-def stop_music_exit():
-    pygame.mixer.music.stop()   # для стопа музыки при выхода из приложения
-
-
-
 def error_destroy(app):
     try:
         app.destroy()  # удаляем окно
