@@ -10,7 +10,7 @@ def main():
     app.resizable(False, False) # нельзя поменять размер
     ctk.set_appearance_mode("Dark")
 
-    def open_game(game_name: str,
+    def open_game(game_name: str, # открываем второй экран
                   img_path: str,gif_path: str, sound_path: str,
                   color_btn_normal: str,
                   color_btn_select: str):
@@ -18,7 +18,7 @@ def main():
         generate.generate_screen(game_name,  # открываем 2 экран
                                  img_path, gif_path, sound_path,
                                  color_btn_normal,color_btn_select)
-    def game(name: str,
+    def game(name: str, # само окна с играми
              img_path: str, gif_path: str, sound_path: str,
              top_place_img: int,
              color_btn_normal: str, color_btn_select: str):

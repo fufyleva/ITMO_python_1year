@@ -4,14 +4,14 @@ from random import randint
 from PIL import Image
 import functions
 
-def generate_screen(game_name: str,
+def generate_screen(game_name: str, # экран с генерацией кода, музыкой, гифкой
                     img_path: str, gif_path: str, sound_path: str,
                     color_btn_normal:str,
                     color_btn_select:str):
-    app = ctk.CTk()
+    app = ctk.CTk() # окно
     app.geometry("400x700+0+0")
     app.title(game_name)
-    app.resizable(False, False)
+    app.resizable(False, False) # нельзя менять размер окна
     ctk.set_appearance_mode("Dark")
 
     img = ctk.CTkLabel(app,
@@ -26,12 +26,12 @@ def generate_screen(game_name: str,
     img.place(relx=0.5, y=120, anchor="center")
     code_box.place(relx=0.5, y=330, anchor="center")
 
-    def open_main():
+    def open_main(): # открыть экран с выбором игр
         functions.error_destroy(app)
         import main
         main.main()
 
-    def generate_code():
+    def generate_code(): # генерация кода (само задание)
         res_str = ''
         for i in range(3):
             indexes_for_numbers = set()

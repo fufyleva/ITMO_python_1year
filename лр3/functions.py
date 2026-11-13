@@ -20,8 +20,8 @@ def animated_gif(app, gif_path):
     return img_box
 
 
-def sound(app, sound_path, btn_color_normal, btn_color_select):
-    def is_playing():
+def sound(app, sound_path, btn_color_normal, btn_color_select): # сама кнопка
+    def is_playing(): # что делает кнопка
         if pygame.mixer.music.get_busy():  # играет ли что-то?
             pygame.mixer.music.stop()
             btn_play_stop.configure(text='play music') # переписать
@@ -38,7 +38,7 @@ def sound(app, sound_path, btn_color_normal, btn_color_select):
     return btn_play_stop
 
 
-def error_destroy(app):
+def error_destroy(app): # разрушаем экран не забывая про очистку журнала очереди
     try:
         app.destroy()  # удаляем окно
     finally:
@@ -49,7 +49,7 @@ def error_destroy(app):
                 pass
 
 
-def exit_btn(app, btn_color_normal, ):
+def exit_btn(app, btn_color_normal): # кнопка выхода
     def exit_app():
         error_destroy(app) # удаляем окно
         pygame.mixer.music.stop() # стоп музыки
