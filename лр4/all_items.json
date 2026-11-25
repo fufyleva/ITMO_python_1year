@@ -1,0 +1,14 @@
+[
+        {"name": "r", "size": 3, "points": 25},
+        {"name": "p", "size": 2, "points": 15},
+        {"name": "a", "size": 2, "points": 15},
+        {"name": "m", "size": 2, "points": 20},
+        {"name": "i", "size": 1, "points": 5},
+        {"name": "k", "size": 1, "points": 15},
+        {"name": "x", "size": 3, "points": 20},
+        {"name": "t", "size": 1, "points": 25},
+        {"name": "f", "size": 1, "points": 15},
+        {"name": "d", "size": 1, "points": 10},
+        {"name": "s", "size": 2, "points": 20},
+        {"name": "c", "size": 2, "points": 20}
+]
