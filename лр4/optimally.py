@@ -49,4 +49,5 @@ def main_one_solution(size: tuple, start_points: int, data: list):
     functions.appearance(size, items, points)
 
 all_items = json.load(open('all_items.json'))
-main_one_solution((3, 6), 15,  all_items)
+main_one_solution((1, 7), 15,  all_items)  # доп задание с 7
+main_one_solution((2, 4), 15, all_items)
