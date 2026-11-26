@@ -10,12 +10,12 @@ def appearance(size: tuple, items: dict, points: int):
     else:
         height, width = size
         res_list = ['[ ]' for i in range(height * width)]  # на случай если есть свободные окошки
-        cur_num = 0  # текущий номер предмета из тех что берем
-        for name in items.keys():  # проходим по ключам
-            for tymes in range(items[name]):  # проходим по количеству раз,
+        cur_num = 0  # текущий элемент res_list
+        for name in items.keys():
+            for tymes in range(items.get(name)):  # проходим по количеству раз,
                                                 # (сколько места занимает предмет)
                 res_list[cur_num] = f'[{name}]'  # перезаписываем [ ] на нужное (например [r])
-                cur_num += 1  # идем к следующему предмету
+                cur_num += 1
 
         for h in range(height):
             for w in range(width):
